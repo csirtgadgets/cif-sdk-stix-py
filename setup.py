@@ -1,7 +1,9 @@
 from setuptools import setup
 
+import cif.sdk
+
 setup(name="cif-sdk-stix",
-    version=cif.sdk.stix.__version__,
+    version='0.00a0',
     description="CIF Python SDK - Stix",
     long_description="Stix Formatter",
     url="https://github.com/csirtgadgets/py-cif-sdk-stix",
@@ -16,9 +18,9 @@ setup(name="cif-sdk-stix",
     keywords='CIF',
     author="Wes Young",
     author_email="wes@barely3am.com",
-    packages = ["cif.sdk.stix","test"],
+    packages = ["cif.sdk","test"],
     install_requires = [
-        "cif.sdk",
+        "cif-sdk",
         'stix'
     ],
     test_suite = "test"
