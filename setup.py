@@ -20,7 +20,7 @@ setup(name="cif-sdk-stix",
     author_email="wes@barely3am.com",
     packages = ["cif.sdk","test"],
     install_requires = [
-        "cif-sdk",
+        #"cif-sdk",
         'stix'
     ],
     test_suite = "test"
