@@ -16,7 +16,7 @@ setup(name="cif-sdk-stix",
     keywords='CIF',
     author="Wes Young",
     author_email="wes@barely3am.com",
-    packages = ["cif.sdk.format.stix","test"],
+    packages = ["cif.sdk.stix","test"],
     install_requires = [
         "cif.sdk",
         'stix'
