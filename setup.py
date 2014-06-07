@@ -6,7 +6,7 @@ req = [i.strip() for i in open("requirements.txt").readlines()]
 import cif.sdk.stix
 
 setup(
-      name="pycif-sdk-stix",
+      name="cif-sdk-stix",
       version=cif.sdk.stix.__version__,
       description="CIF-STIX SDK",
       long_description="CIF-STIX SDK for Python",
@@ -19,7 +19,7 @@ setup(
                    "License :: OSI Approved :: LGPL License",
                    "Programming Language :: Python",
                    ],
-      keywords=['cif','security','intelligence','stix'],
+      keywords=['cif','security','stix'],
       author="Wes Young",
       author_email="wes@barely3am.com",
       packages=find_packages(),
