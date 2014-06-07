@@ -1,27 +1,28 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-import cif.sdk
+# this grabs the requirements from requirements.txt
+req = [i.strip() for i in open("requirements.txt").readlines()]
 
-setup(name="cif-sdk-stix",
-    version='0.00a0',
-    description="CIF Python SDK - Stix",
-    long_description="Stix Formatter",
-    url="https://github.com/csirtgadgets/py-cif-sdk-stix",
-    license='LGPL',
-    classifiers=[
-        "Topic :: System :: Networking",
-        "Environment :: Other Environment",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: LGPL License",
-        "Programming Language :: Python",
-    ],
-    keywords='CIF',
-    author="Wes Young",
-    author_email="wes@barely3am.com",
-    packages = ["cif.sdk","test"],
-    install_requires = [
-        #"cif-sdk",
-        'stix'
-    ],
-    test_suite = "test"
+import cif.sdk.stix
+
+setup(
+      name="pycif-sdk-stix",
+      version=cif.sdk.stix.__version__,
+      description="CIF-STIX SDK",
+      long_description="CIF-STIX SDK for Python",
+      url="https://github.com/csirtgadgets/py-cif-sdk-stix",
+      license='LICENSE',
+      classifiers=[
+                   "Topic :: System :: Networking",
+                   "Environment :: Other Environment",
+                   "Intended Audience :: Developers",
+                   "License :: OSI Approved :: LGPL License",
+                   "Programming Language :: Python",
+                   ],
+      keywords=['cif','security','intelligence','stix'],
+      author="Wes Young",
+      author_email="wes@barely3am.com",
+      packages=find_packages(),
+      install_requires=req,
+      test_suite = "test"
 )

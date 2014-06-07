@@ -1,3 +1,5 @@
+__version__ = '0.0.0a0'
+
 import time
 from stix.indicator import Indicator
 from stix.core import STIXPackage, STIXHeader
@@ -10,8 +12,9 @@ import pprint
 pp = pprint.PrettyPrinter()
 
 class Stix(object):
-    def __init__(self,**kwargs):
-        self._description = kwargs.get('description') or 'unknown'
+    def __init__(self,description='unknown',*args,**kwargs):
+        self._description = description
+        
         stix_package = STIXPackage()
         stix_header = STIXHeader()
         stix_header.description = self._description
@@ -19,8 +22,7 @@ class Stix(object):
         
         self._handle = stix_package
         
-    def create_indicator(self,**kwargs):
-        keypair = kwargs.get('keypair')
+    def create_indicator(self, keypair=None,*args,**kwargs):
         indicator = Indicator()
         indicator.set_producer_identity(keypair.get('provider'))
         indicator.set_produced_time(time.strftime('%Y-%m-%dT%H:%M:%SZ', time.localtime(keypair.get('reporttime'))))
