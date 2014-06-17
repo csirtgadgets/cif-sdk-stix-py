@@ -6,7 +6,7 @@ The CIF Software Development Kit (SDK) for Python contains library code and exam
 # Installation
 ## Ubuntu
   ```bash
-  apt-get install libxml2-dev libxslt1-dev python-dev pip cython
+  apt-get install python-dev pip cython libxml2-dev libxslt1-dev
   pip install -r requirements.txt
   python setup.py build
   python setup.py test
@@ -14,7 +14,6 @@ The CIF Software Development Kit (SDK) for Python contains library code and exam
   ```
   
 # Examples
-## Client 
 ## API
 
 # Support and Documentation
