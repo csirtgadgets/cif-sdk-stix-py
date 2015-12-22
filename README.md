@@ -12,9 +12,6 @@ The CIF Software Development Kit (SDK) for Python contains library code and exam
   python setup.py test
   python setup.py install
   ```
-  
-# Examples
-## API
 
 # Support and Documentation
 
